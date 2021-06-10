@@ -2,7 +2,7 @@
 #Arcane
 -------------
 #Description  
-This is a markdown generator that allows a user to create an entire README document via node js
+This is a markdown generator that allows a user to create an entire README document via nodejs. Such as this README! 
 -------------
 #Table of Contents  
 [Arcane](#Arcane)
