@@ -5,13 +5,13 @@
 This is a markdown generator that allows a user to create an entire README document via nodejs. Such as this README! 
 -------------
 #Table of Contents  
-[Arcane](#Arcane)
-[Description](#Description)
-[Usage](#Usage)
-[Screenshot](#Screenshot)
-[Credits](#Credits)
-[Questions](#Questions)
-[License](#License)
+[Arcane](#Arcane)  
+[Description](#Description)  
+[Usage](#Usage)  
+[Screenshot](#Screenshot)  
+[Credits](#Credits)  
+[Questions](#Questions)  
+[License](#License)  
 --------------
 #Usage  
 in command line insert node index.js, then follow these prompts
