@@ -1,6 +1,22 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+function license(license) {
+    switch (license) {
+        case 'MIT':
+            return '[MIT](https://choosealicense.com/licenses/mit/)'
+            break;
+        case 'Apache':
+            return '[Apache](https://www.apache.org/licenses/LICENSE-2.0.txt)'
+            break;
+        case 'GNU':
+            return '[GNU](https://www.gnu.org/licenses/fdl-1.3.txt)'
+            break;
+        default:
+            return '[MIT](https://choosealicense.com/licenses/mit/)'
+    }
+}
+
 inquirer
     .prompt([
         {
@@ -11,53 +27,55 @@ inquirer
         {
             type: 'input',
             message: 'DESCRIBE the project (motivation?, what problem did it solve?, what did you learn?), be detailed:',
-            name: 'discription',
+            name: 'description',
         },
         {
             type: 'input',
             message: 'Provide instructions for USAGE',
-            name: 'usage:',
+            name: 'usage',
         },
         {
             type: 'input',
-            message: 'Enter pathway to SCREENSHOT:',
-            name: 'pathway',
+            message: 'Enter ![ALT-TEXT] and pathway to (SCREENSHOT): example---> ![screenshot](assets/images/screenshot.png)',
+            name: 'screenshot',
         },
         {
             type: 'input',
-            message: 'Enter ''ALT-TEXT'' for screenshot:',
-            name: 'altText',
+            message: 'CREDITS: List your collaborators, if any, with links to their GitHub profiles. If you followed tutorials, include links to those here as well.',
+            name: 'credits',
         },
-
         {
-            type: 'input',
-            message: 'Table of Contents',
-            name: 'Contents',
+            type: 'list',
+            message: 'Choose a LICENSE from the list below:',
+            choices: ['MIT', 'Apache', 'GNU'],
+            name: 'license',
         },
-        //  what are your content titles? => create clickable table [inputed content title](#title)
-        //  [Description](#description)
-        //  [Usage](#usage)
-        //  []
-        //  ...
-
     ]).then((data) => {
-        let HTML = `<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <title>Mini</title>
-        </head>
-        <body>
-            <h1 id="name">${data.name}</h1>
-            <h2 id="location">${data.location}</h2>
-            <section id="bio">${data.bio}</section>
-            <h3 id="gitHub">${data.gitHubUrl}</h3>
-            <h3 id="linkedIn">${data.linkedInUrl}</h3>
-        </body>
-        </html>`
-        return fs.writeFileSync('index.html', HTML);
+        let markdown = `
+        #${data.title}
+        -------------
+        #Description
+        ${data.description}
+        -------------
+        #Table of Contents
+        [${data.title}](#${data.title})
+        [Description](#Description)
+        [Usage](#Usage)
+        [Screenshot](#Screenshot)
+        [Credits](#Credits)
+        [License](#License)
+        --------------
+        #Usage
+        ${data.usage}
+        -------------
+        #Screenshot
+        ${data.screenshot}
+        -------------
+        #Credits
+        ${data.credits}
+        -------------
+        #License
+        ${license(data.license)}`
+        return fs.writeFileSync('README.md', markdown);
         ;
     });
