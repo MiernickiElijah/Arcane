@@ -17,6 +17,22 @@ function license(license) {
     }
 }
 
+function badge(badge) {
+    switch (badge) {
+        case 'MIT':
+            return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            break;
+        case 'Apache':
+            return '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+            break;
+        case 'GNU':
+            return '[![License: FDL 1.3](https://img.shields.io/badge/License-FDL%20v1.3-blue.svg)](https://www.gnu.org/licenses/fdl-1.3)'
+            break;
+        default:
+            return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    }
+}
+
 inquirer
     .prompt([
         {
@@ -36,7 +52,7 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Provide file name for the SCREENSHOT and its extension, note: this file should be located in assets/images/: example---> screenshot.png',
+            message: 'Provide fileName.extension for the SCREENSHOT , note: this file should be located in assets/images/: example---> screenshot.png',
             name: 'screenshot',
         },
         {
@@ -45,34 +61,48 @@ inquirer
             name: 'credits',
         },
         {
+            type: 'input',
+            message: 'Enter the link to your GITHUB:',
+            name: 'gitHub',
+        },
+        {
+            type: 'input',
+            message: 'Enter your EMAIL address:',
+            name: 'email',
+        },
+        {
             type: 'list',
             message: 'Choose a LICENSE from the list below:',
             choices: ['MIT', 'Apache', 'GNU'],
             name: 'license',
         },
     ]).then((data) => {
-        let markdown = `
+        let markdown = `${badge(data.license)}
 #${data.title}
 -------------
 #Description
-${data.description}
+###${data.description}
 -------------
 #Table of Contents
-[${data.title}](#${data.title})
-[Description](#Description)
-[Usage](#Usage)
-[Screenshot](#Screenshot)
-[Credits](#Credits)
-[License](#License)
+###[${data.title}](#${data.title})
+###[Description](#Description)
+###[Usage](#Usage)
+###[Screenshot](#Screenshot)
+###[Credits](#Credits)
+###[Questions](#Questions)
+###[License](#License)
 --------------
 #Usage
-${data.usage}
+###${data.usage}
 --------------
 #Screenshot
-![Screenshot](assets/images/${data.screenshot})
+###![Screenshot](assets/images/${data.screenshot})
 --------------
 #Credits
-${data.credits}
+###${data.credits}
+--------------
+#Questions
+###Connect on [github](${data.gitHub}) or email me at ${data.email} with any questions or comments. 
 --------------
 #License
 This project is covered under the ${license(data.license)} license.`
