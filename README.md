@@ -4,7 +4,7 @@
 #Description
 This is a professional README.md file that allows a user to generate an entire markdown document using command line prompts.
 -------------
-#Table of Contents
+#Table of Contents  
 [Arcane](#Arcane)
 [Description](#Description)
 [Usage](#Usage)
@@ -13,18 +13,17 @@ This is a professional README.md file that allows a user to generate an entire m
 [Questions](#Questions)
 [License](#License)
 --------------
-#Usage
+#Usage  
 Using node index.js in command line follow prompts to generate README.md file.
 --------------
-#Screenshot
+#Screenshot  
 ![Screenshot](assets/images/screenshot.png)
 --------------
-#Credits
-https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
-https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+#Credits  
+https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 --------------
-#Questions
+#Questions  
 Connect on [github](https://github.com/MiernickiElijah) or email me at miernickielijah@gmail.com with any questions or comments. 
 --------------
-#License
+#License  
 This project is covered under the [MIT](https://choosealicense.com/licenses/mit/) license.
