@@ -5,13 +5,13 @@
 ###This is a professional README.md file that allows a user to generate an entire markdown document using command line prompts.
 -------------
 #Table of Contents
-###[Arcane](#Arcane)
-###[Description](#Description)
-###[Usage](#Usage)
-###[Screenshot](#Screenshot)
-###[Credits](#Credits)
-###[Questions](#Questions)
-###[License](#License)
+#[Arcane](#Arcane)
+#[Description](#Description)
+#[Usage](#Usage)
+#[Screenshot](#Screenshot)
+#[Credits](#Credits)
+#[Questions](#Questions)
+#[License](#License)
 --------------
 #Usage
 ###Using node index.js in command line follow prompts to generate README.md file.

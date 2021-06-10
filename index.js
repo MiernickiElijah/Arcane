@@ -84,13 +84,13 @@ inquirer
 ###${data.description}
 -------------
 #Table of Contents
-###[${data.title}](#${data.title})
-###[Description](#Description)
-###[Usage](#Usage)
-###[Screenshot](#Screenshot)
-###[Credits](#Credits)
-###[Questions](#Questions)
-###[License](#License)
+#[${data.title}](#${data.title})
+#[Description](#Description)
+#[Usage](#Usage)
+#[Screenshot](#Screenshot)
+#[Credits](#Credits)
+#[Questions](#Questions)
+#[License](#License)
 --------------
 #Usage
 ###${data.usage}
