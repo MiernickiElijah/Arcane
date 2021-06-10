@@ -18,7 +18,7 @@ in command line insert node index.js, then follow these prompts
 --------------
 #Screenshot  
 ![Screenshot](assets/images/screenshot.png)
-![walkthrough](https://drive.google.com/file/d/1jxLeV_9vGF-dtMO_bgdVgS9wToa5irYc/view)
+[![walkthrough](https://res.cloudinary.com/marcomontalbano/image/upload/v1623346710/video_to_markdown/images/google-drive--1jxLeV_9vGF-dtMO_bgdVgS9wToa5irYc-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/1jxLeV_9vGF-dtMO_bgdVgS9wToa5irYc/view "walkthrough")
 --------------
 #Credits  
 --------------
