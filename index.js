@@ -36,7 +36,7 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Enter ![ALT-TEXT] and pathway to (SCREENSHOT): example---> ![screenshot](assets/images/screenshot.png)',
+            message: 'Provide name of file for SCREENSHOT and its extension: example---> screenshot.png',
             name: 'screenshot',
         },
         {
@@ -52,30 +52,30 @@ inquirer
         },
     ]).then((data) => {
         let markdown = `
-        #${data.title}
-        -------------
-        #Description
-        ${data.description}
-        -------------
-        #Table of Contents
-        [${data.title}](#${data.title})
-        [Description](#Description)
-        [Usage](#Usage)
-        [Screenshot](#Screenshot)
-        [Credits](#Credits)
-        [License](#License)
-        --------------
-        #Usage
-        ${data.usage}
-        -------------
-        #Screenshot
-        ${data.screenshot}
-        -------------
-        #Credits
-        ${data.credits}
-        -------------
-        #License
-        ${license(data.license)}`
+#${data.title}
+-------------
+#Description
+${data.description}
+-------------
+#Table of Contents
+[${data.title}](#${data.title})
+[Description](#Description)
+[Usage](#Usage)
+[Screenshot](#Screenshot)
+[Credits](#Credits)
+[License](#License)
+--------------
+#Usage
+${data.usage}
+--------------
+#Screenshot
+![Screenshot](assets/images/${screenshot})
+--------------
+#Credits
+${data.credits}
+--------------
+#License
+${license(data.license)}`
         return fs.writeFileSync('README.md', markdown);
         ;
     });
