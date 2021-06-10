@@ -36,7 +36,7 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Provide name of file for SCREENSHOT and its extension: example---> screenshot.png',
+            message: 'Provide file name for the SCREENSHOT and its extension, note: this file should be located in assets/images/: example---> screenshot.png',
             name: 'screenshot',
         },
         {
@@ -69,13 +69,13 @@ ${data.description}
 ${data.usage}
 --------------
 #Screenshot
-![Screenshot](assets/images/${screenshot})
+![Screenshot](assets/images/${data.screenshot})
 --------------
 #Credits
 ${data.credits}
 --------------
 #License
-${license(data.license)}`
+This project is covered under the ${license(data.license)} license.`
         return fs.writeFileSync('README.md', markdown);
         ;
     });
