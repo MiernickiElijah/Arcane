@@ -81,28 +81,28 @@ inquirer
 #${data.title}
 -------------
 #Description
-###${data.description}
+${data.description}
 -------------
 #Table of Contents
-#[${data.title}](#${data.title})
-#[Description](#Description)
-#[Usage](#Usage)
-#[Screenshot](#Screenshot)
-#[Credits](#Credits)
-#[Questions](#Questions)
-#[License](#License)
+[${data.title}](#${data.title})
+[Description](#Description)
+[Usage](#Usage)
+[Screenshot](#Screenshot)
+[Credits](#Credits)
+[Questions](#Questions)
+[License](#License)
 --------------
 #Usage
-###${data.usage}
+${data.usage}
 --------------
 #Screenshot
-###![Screenshot](assets/images/${data.screenshot})
+![Screenshot](assets/images/${data.screenshot})
 --------------
 #Credits
-###${data.credits}
+${data.credits}
 --------------
 #Questions
-###Connect on [github](${data.gitHub}) or email me at ${data.email} with any questions or comments. 
+Connect on [github](${data.gitHub}) or email me at ${data.email} with any questions or comments. 
 --------------
 #License
 This project is covered under the ${license(data.license)} license.`
