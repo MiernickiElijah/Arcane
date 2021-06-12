@@ -80,31 +80,37 @@ inquirer
         let markdown = `${badge(data.license)}
 #${data.title}
 -------------
-#Description\  
+## Description\  
 ${data.description}
 -------------
-#Table of Contents\  
-[${data.title}](#${data.title})
-[Description](#Description)
-[Usage](#Usage)
-[Screenshot](#Screenshot)
-[Credits](#Credits)
-[Questions](#Questions)
-[License](#License)
+## Table of Contents\  
+* [${data.title}](#${data.title})
+
+* [Description](#description)
+
+* [Usage](#usage)
+
+* [Screenshot](#screenshot)
+
+* [Credits](#credits)
+
+* [Questions](#questions)
+
+* [License](#license)
 --------------
-#Usage\  
+## Usage\  
 ${data.usage}
 --------------
-#Screenshot\  
+## Screenshot\  
 ![Screenshot](assets/images/${data.screenshot})
 --------------
-#Credits\  
+## Credits\  
 ${data.credits}
 --------------
-#Questions\  
+## Questions\  
 Connect on [github](${data.gitHub}) or email me at ${data.email} with any questions or comments. 
 --------------
-#License\  
+## License\  
 This project is covered under the ${license(data.license)} license.`
         return fs.writeFileSync('README.md', markdown);
         ;
