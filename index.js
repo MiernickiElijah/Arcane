@@ -83,6 +83,7 @@ inquirer
 ## Description\  
 ${data.description}
 -------------
+<<<<<<< HEAD
 ## Table of Contents\  
 * [${data.title}](#${data.title})
 
@@ -97,6 +98,16 @@ ${data.description}
 * [Questions](#questions)
 
 * [License](#license)
+=======
+#Table of Contents\  
+[${data.title}](#${data.title})  
+[Description](#Description)  
+[Usage](#Usage)  
+[Screenshot](#Screenshot)  
+[Credits](#Credits)  
+[Questions](#Questions)  
+[License](#License)  
+>>>>>>> 141bc397e63a9de1768c8f5db950013f3b59cd50
 --------------
 ## Usage\  
 ${data.usage}
