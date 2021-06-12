@@ -22,7 +22,7 @@ This is a markdown generator that allows a user to create an entire README docum
 * [License](#license)
 
 ## Usage  
-
+In the command line run node index.js, then follow the prompts to generate an entire README.md file. 
 --------------
 ## Screenshot  
 ![Screenshot](assets/images/screenshot.png)
